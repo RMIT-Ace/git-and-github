@@ -7,7 +7,9 @@
 - Mature and actively maintained
 - De Facto standard
 - Distributed Version Control System (DVCS)
-
+    - Flexible - support _any_ workflow
+- Small and fast 
+- Support LARGE repositories
 
 # Creating a git project
 
