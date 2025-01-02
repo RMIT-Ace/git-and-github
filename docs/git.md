@@ -136,7 +136,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
     - if you change your mind on certain change or changes, they can be removed from the staging area
     - you can even removes all changes from staging area and start a new one from the previous `commit` (see definition of `commit` below)
 
-Add a single change.
+Add a single change, change to `file0.txt`. In this case, `file0.txt` has been moved from current directory to a directory `src`.
 
 ```bash
 $ git add file0.txt
@@ -145,6 +145,7 @@ $ git add file0.txt
 Sample output:
 
 ```bash
+$ git status
 On branch main
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -162,7 +163,7 @@ Untracked files:
 	src/file3.txt
 ```
 
-Add another change to git's staging area.
+Add another change to git's staging area. In this case, `file1.txt` has been modified.
 
 ```bash
 $ git add src/file1.txt
@@ -185,7 +186,7 @@ Untracked files:
 	src/file3.txt
 ```
 
-To cadd all changes at once, do:
+To add all changes at once, do:
 
 ```bash
 $ git add .
