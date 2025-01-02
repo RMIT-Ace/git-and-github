@@ -10,6 +10,10 @@
     - Flexible - support _any_ workflow
 - Small and fast 
 - Support LARGE repositories
+- Data Assurance
+- Staging area
+- Free and open (source)
+
 
 # Creating a git project
 
@@ -56,3 +60,29 @@ Checking directory structure.
 ```
 
 Now `git` can track changes to source files within this folder (a git repository).
+
+# Git's Staging Area
+
+
+```bash
+.
+├── .git                     <<- Hidden folder - Git's repository
+                                                (3)
+                                                 ^
+    +-----------------+                          |
+    |                 |                          |
+    | Git's Staging   |                         (2)
+    | (imaginary)     |                          ^
+    +-----------------+                          |
+                                                 |
+├── docs                      \                  |
+├── src                       |                  
+├── any future direcotory     |- Your work area (1)
+├── any future direcotory     |
+└── ...                       /
+
+```
+
+1. You make changes to your project
+2. You add changes to staging area
+3. You update chagnes from staging area to Git's repository
