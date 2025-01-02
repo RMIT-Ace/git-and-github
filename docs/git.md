@@ -102,7 +102,7 @@ Now `git` can track changes to source files within this folder (a git repository
 # Working with your (local) repository
 
 - Rule #1 - do not directly modify `.git` (hidden) folder
-- You make changes to files and folders in the work area (any files of folder outside `.git` folder). These changes includes:
+- You make changes to files and folders in the work area (any files or folder outside `.git` folder). These changes includes:
     - add, update, or delete files and folders
     - move files and/or folders
 - You selectively add (or remove) each change (above) into the staging area.
