@@ -66,14 +66,19 @@ Now `git` can track changes to source files within this folder (a git repository
 
 ```bash
 .
-├── .git                     <<- Hidden folder - Git's repository
-                                                (3)
-                                                 ^
+├── .git                     <<- Hidden folder
+                                                
+    +-----------------+                         
+    |                 |                         
+    | Git's Repository|                         (3)
+    |                 |                          ^
     +-----------------+                          |
+                                                 |
+    +- - - - - - - - -+                          |
     |                 |                          |
     | Git's Staging   |                         (2)
     | (imaginary)     |                          ^
-    +-----------------+                          |
+    +- - - - - - - - -+                          |
                                                  |
 ├── docs                      \                  |
 ├── src                       |                  
