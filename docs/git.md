@@ -116,17 +116,17 @@ Sample output.
 
 ```bash
 On branch main
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	deleted:    file0.txt
-	modified:   src/file1.txt
+Changes not staged for commit:                                          \
+  (use "git add/rm <file>..." to update what will be committed)         | Git's 
+  (use "git restore <file>..." to discard changes in working directory) | staging
+	deleted:    file0.txt                                               | area
+	modified:   src/file1.txt                                           /
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	file2.txt
-	src/file0.txt
-	src/file3.txt
+Untracked files:                                                        \
+  (use "git add <file>..." to include in what will be committed)        | Your working
+	file2.txt                                                           | area outside
+	src/file0.txt                                                       | the staging
+	src/file3.txt                                                       / area
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -149,19 +149,21 @@ $ git status
 On branch main
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	deleted:    file0.txt
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   src/file1.txt
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	file2.txt
-	src/file0.txt
+	deleted:    file0.txt                                             ----+
+                                                                          |
+Changes not staged for commit:                                            |
+  (use "git add <file>..." to update what will be committed)              |
+  (use "git restore <file>..." to discard changes in working directory)   |
+	modified:   src/file1.txt                                             |
+                                                                          |
+Untracked files:                                                          |
+  (use "git add <file>..." to include in what will be committed)          |
+	file2.txt                                                             |
+	src/file0.txt                                                    <----+
 	src/file3.txt
 ```
+
+Notice, git reports `file0.txt' as being deleted from the current directory and added as a new file under 'src' directory (also note that `src` is currently outside git's staging area).
 
 Add another change to git's staging area. In this case, `file1.txt` has been modified.
 
