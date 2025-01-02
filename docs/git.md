@@ -105,9 +105,186 @@ Now `git` can track changes to source files within this folder (a git repository
 - You make changes to files and folders in the work area (any files or folder outside `.git` folder). These changes includes:
     - add, update, or delete files and folders
     - move files and/or folders
+
+Checking for changes.
+
+```bash
+$ git status
+```
+
+Sample output.
+
+```bash
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    file0.txt
+	modified:   src/file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file2.txt
+	src/file0.txt
+	src/file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+
 - You selectively add (or remove) each change (above) into the staging area.
     - if you change your mind on certain change or changes, they can be removed from the staging area
     - you can even removes all changes from staging area and start a new one from the previous `commit` (see definition of `commit` below)
+
+Add a single change.
+
+```bash
+$ git add file0.txt
+```
+
+Sample output:
+
+```bash
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    file0.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   src/file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file2.txt
+	src/file0.txt
+	src/file3.txt
+```
+
+Add another change to git's staging area.
+
+```bash
+$ git add src/file1.txt
+```
+
+Checking git's changes and status.
+
+```
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    file0.txt
+	modified:   src/file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file2.txt
+	src/file0.txt
+	src/file3.txt
+```
+
+To cadd all changes at once, do:
+
+```bash
+$ git add .
+```
+
+Checking git's status.
+
+```bash
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   file2.txt
+	renamed:    file0.txt -> src/file0.txt
+	modified:   src/file1.txt
+	new file:   src/file3.txt
+```
+
+Let pretend that `file3.txt` is not ready to be committed. We can remove this file from the current git's staging by:
+
+```bash
+$ git restore --staged src/file3.txt
+```
+
+Checing status again.
+
+```bash
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   file2.txt
+	renamed:    file0.txt -> src/file0.txt
+	modified:   src/file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	src/file3.txt
+```
+
 - You tell Git to update it's repository with the contents in the staging area
     - This is a batch update - also called a `commit`
     - Upon successful update, git will give you a unique ID for this commit - this is called `a commit hash`
+
+So, now, we are ready to commit this batch of changes which consists of chabnges to the 3 files (file0.text, file1.txt, and file2.txt). We can tell git to commit this batch as follow:
+
+```bash
+$ git commit -m "Updated 3 files. Omitted file3.txt for now"
+```
+
+Checking git status
+
+```bash
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	src/file3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+Checking git's log.
+
+```bash
+$ git log
+```
+
+Git's output:
+
+```bash
+commit 3da5786f7250f780a2432cc2f14b73ce356f105f (HEAD -> main)
+Author: ace <ace@ADA-1.local>
+Date:   Fri Jan 3 10:10:51 2025 +1100
+
+    Update 3 files. file3.txt is omitted
+
+commit 41765161f00e6fd64a2ab9346008540eff4463f3
+Author: ace <ace@ADA-1.local>
+Date:   Fri Jan 3 09:55:02 2025 +1100
+
+    Added file0
+
+commit 8e31a92144552abe8a89dec4537ae8af8ec5e0a1
+Author: ace <ace@ADA-1.local>
+Date:   Fri Jan 3 09:46:07 2025 +1100
+
+    Added file1
+```
+
+You can reformat git's log for pretty outputs, i.e:
+
+```bash
+git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"
+```
+
+A prettier output:
+
+```bash
+* 3da5786 - (HEAD -> main) Update 3 files. file3.txt is omitted (4 minutes ago) <ace>
+* 4176516 - Added file0 (20 minutes ago) <ace>
+* 8e31a92 - Added file1 (29 minutes ago) <ace>
+```
+
