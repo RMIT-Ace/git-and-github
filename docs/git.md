@@ -98,3 +98,16 @@ Now `git` can track changes to source files within this folder (a git repository
 - There should be only one and no nested or duplicate `.git` within this project directory
 - Directly changing the contents of this folder may permanently damage git repository
 - Removing this folder will permanently remove git repository
+
+# Working with your (local) repository
+
+- Rule #1 - do not directly modify `.git` (hidden) folder
+- You make changes to files and folders in the work area (any files of folder outside `.git` folder). These changes includes:
+    - add, update, or delete files and folders
+    - move files and/or folders
+- You selectively add (or remove) each change (above) into the staging area.
+    - if you change your mind on certain change or changes, they can be removed from the staging area
+    - you can even removes all changes from staging area and start a new one from the previous `commit` (see definition of `commit` below)
+- You tell Git to update it's repository with the contents in the staging area
+    - This is a batch update - also called a `commit`
+    - Upon successful update, git will give you a unique ID for this commit - this is called `a commit hash`
