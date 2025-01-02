@@ -91,3 +91,10 @@ Now `git` can track changes to source files within this folder (a git repository
 1. You make changes to your project
 2. You add changes to staging area
 3. You update chagnes from staging area to Git's repository
+
+# Note on `.git` Hidden Folder
+
+- Git manages the contents within this folder
+- There should be only one and no nested or duplicate `.git` within this project directory
+- Directly changing the contents of this folder may permanently damage git repository
+- Removing this folder will permanently remove git repository
