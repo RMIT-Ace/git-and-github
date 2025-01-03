@@ -163,7 +163,7 @@ Untracked files:                                                              |
 	src/file3.txt
 ```
 
-Notice, git reports `file0.txt' as being deleted from the current directory and added as a new file under 'src' directory (also note that `src` is currently outside git's staging area).
+Notice, git reports `file0.txt` as being deleted from the current directory and added as a new file under `src` directory (also note that `src` is currently outside git's staging area).
 
 Add another change to git's staging area. In this case, `file1.txt` has been modified.
 
