@@ -52,7 +52,7 @@ Initialized empty Git repository in /Users/ace/temp/git-tutorials/my-project/.gi
 
 Checking directory structure.
 
-```bash
+```
 .
 ├── .git        <<- Hidden folder for git to use
 ├── docs
@@ -64,7 +64,7 @@ Now `git` can track changes to source files within this folder (a git repository
 # Git's Staging Area
 
 
-```bash
+```
 .
 ├── .git                     <<- Hidden folder
                                                 
@@ -114,7 +114,7 @@ $ git status
 
 Sample output.
 
-```bash
+```
 On branch main
 Changes not staged for commit:                                          \
   (use "git add/rm <file>..." to update what will be committed)         | Git's 
@@ -196,7 +196,7 @@ $ git add .
 
 Checking git's status.
 
-```bash
+```
 On branch main
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -214,7 +214,7 @@ $ git restore --staged src/file3.txt
 
 Checking status again.
 
-```bash
+```
 $ git status
 On branch main
 Changes to be committed:
@@ -240,7 +240,7 @@ $ git commit -m "Updated 3 files. Omitted file3.txt for now"
 
 Checking git status
 
-```bash
+```
 On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -257,7 +257,7 @@ $ git log
 
 Git's output:
 
-```bash
+```
 commit 3da5786f7250f780a2432cc2f14b73ce356f105f (HEAD -> main)
 Author: ace <ace@ADA-1.local>
 Date:   Fri Jan 3 10:10:51 2025 +1100
@@ -285,7 +285,7 @@ git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(b
 
 A prettier output:
 
-```bash
+```
 * 3da5786 - (HEAD -> main) Update 3 files. file3.txt is omitted (4 minutes ago) <ace>
 * 4176516 - Added file0 (20 minutes ago) <ace>
 * 8e31a92 - Added file1 (29 minutes ago) <ace>
