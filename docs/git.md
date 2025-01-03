@@ -150,14 +150,14 @@ On branch main
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	deleted:    file0.txt                                             ----+
-                                                                          |
-Changes not staged for commit:                                            |
-  (use "git add <file>..." to update what will be committed)              |
-  (use "git restore <file>..." to discard changes in working directory)   |
+                                                                              |
+Changes not staged for commit:                                                |
+  (use "git add <file>..." to update what will be committed)                  |
+  (use "git restore <file>..." to discard changes in working directory)       |
 	modified:   src/file1.txt                                             |
-                                                                          |
-Untracked files:                                                          |
-  (use "git add <file>..." to include in what will be committed)          |
+                                                                              |
+Untracked files:                                                              |
+  (use "git add <file>..." to include in what will be committed)              |
 	file2.txt                                                             |
 	src/file0.txt                                                    <----+
 	src/file3.txt
