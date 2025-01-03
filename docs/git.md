@@ -144,7 +144,7 @@ $ git add file0.txt
 
 Sample output:
 
-```bash
+```
 $ git status
 On branch main
 Changes to be committed:
