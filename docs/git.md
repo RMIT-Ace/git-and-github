@@ -124,9 +124,9 @@ Changes not staged for commit:                                          \
 
 Untracked files:                                                        \
   (use "git add <file>..." to include in what will be committed)        | Your working
-	file2.txt                                                           | area outside
-	src/file0.txt                                                       | the staging
-	src/file3.txt                                                       / area
+	file2.txt                                                       | area outside
+	src/file0.txt                                                   | the staging
+	src/file3.txt                                                   / area
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
