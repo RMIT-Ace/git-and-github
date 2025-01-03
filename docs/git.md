@@ -61,7 +61,7 @@ Checking directory structure.
 
 Now `git` can track changes to source files within this folder (a git repository).
 
-# Git's Staging Area
+# Git's Main Repository & Staging Area
 
 
 ```
