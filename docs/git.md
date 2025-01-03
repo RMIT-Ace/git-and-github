@@ -71,9 +71,10 @@ Now `git` can track changes to source files within this folder (a git repository
     +-----------------+                         
     |                 |                         
     | Git's Repository|                         (3)
-    |                 |                          ^
+    |     (main)      |                          ^
     +-----------------+                          |
-                                                 |
+             ^                                   |
+             |                                   |
     +- - - - - - - - -+                          |
     |                 |                          |
     | Git's Staging   |                         (2)
