@@ -212,7 +212,7 @@ Let pretend that `file3.txt` is not ready to be committed. We can remove this fi
 $ git restore --staged src/file3.txt
 ```
 
-Checing status again.
+Checking status again.
 
 ```bash
 $ git status
