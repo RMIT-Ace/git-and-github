@@ -119,8 +119,8 @@ On branch main
 Changes not staged for commit:                                          \
   (use "git add/rm <file>..." to update what will be committed)         | Git's 
   (use "git restore <file>..." to discard changes in working directory) | staging
-	deleted:    file0.txt                                               | area
-	modified:   src/file1.txt                                           /
+	deleted:    file0.txt                                           | area
+	modified:   src/file1.txt                                       /
 
 Untracked files:                                                        \
   (use "git add <file>..." to include in what will be committed)        | Your working
