@@ -106,7 +106,7 @@ $ git branch --all
 ```
 
 You work on a branch similarly to when working on the main branch. Your changes
-are batched update from staging area into a current branch.
+are batch-updated from staging area into a current branch.
 
 Let's check changes from working area (against the current branch).
 
@@ -314,6 +314,122 @@ $ tree -L 2
 
 This process can be repeated, i.e. more changes made to both `main` and `branch-1` and merge changes between the 2 branches.
 
+# Conflicts!
 
+Normally, git is quite good and handling merging changes automatically. However, conflicts occur when changes occur on the same file from different branches.
 
+Let assume that `file0.txt` was updated on both `main` and `branch-1`. In this case, auto-merge will fail. Git will display this error, for example:
+
+```
+$ git checkout main
+...
+$ git merge branch-1
+Auto-merging src/file0.txt
+CONFLICT (content): Merge conflict in src/file0.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Checking git status, it is complaining with this message:
+
+```
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   file0.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+In this scenario, git cannot determine how to merge changes. It will add `conflict` markers into files with conflicts. For example:
+
+```
+$ cat file0.txt
+<<<<<<< HEAD                               <<- Conflict marker
+file0 - main also updated this line!
+=======                                    <<- Conflict marker
+file0(zero) - modified from branch-1
+branch-1 add extra line - this line
+>>>>>>> branch-1                           <<- Conflict marker
+```
+
+## Conflict Resolution
+
+Files marked with conflict markers must be manually resolved (edited) first. You resolve conflicts by:
+
+1. Manually edit changes (selectively exclude unwanted chages)
+2. Remove conflict markers
+3. Add this change to staging area
+4. Commit changes from staging area (into current branch)
+
+For example, let's keep everything done on `branch-1` and remove all changes done on `main` for file `file0.txt`. So now, `file0.txt` looks like this after the resolution.
+
+```
+file0(zero) - modified from branch-1
+branch-1 add extra line - this line
+```
+
+Now add this change into staging.
+
+```
+$ git add file0.txt
+```
+
+Add commit this change from staging to the current branch.
+
+```
+$ git commit -m "Resolve conflicts"
+```
+
+Let's look at our current log.
+
+```
+$ glol
+*   d255ebd - (HEAD -> main) Resoved conflict (5 seconds ago) <Ace>
+|\
+| * 147d00d - (branch-1) Update file0.txt (14 minutes ago) <Ace>
+* | b970ecf - Updated file0 (13 minutes ago) <Ace>
+|/
+* 3545a9d - Added and relocated files (46 minutes ago) <Ace>
+* 3710bfc - Added file3 (57 minutes ago) <Ace>
+* 3da5786 - Update 3 files. file3.txt is omitted (4 hours ago) <ace>
+* 4176516 - Added file0 (5 hours ago) <ace>
+* 8e31a92 - Added file1 (5 hours ago) <ace>
+```
+
+# Removing branch
+
+When a branch is no longer needed, we can delete it.
+
+```
+$ git branch -d branch-1
+Deleted branch branch-1 (was 147d00d)
+```
+
+Listing all branches. Take note that 'branch-1' is now gone.
+
+```
+$ git branch --all
+* main
+```
+
+Also note the different now when displaying git log.
+
+```
+$ glol
+*   d255ebd - (HEAD -> main) Resoved conflict (6 minutes ago) <Ace>
+|\
+| * 147d00d - Update file0.txt (20 minutes ago) <Ace>
+* | b970ecf - Updated file0 (19 minutes ago) <Ace>
+|/
+* 3545a9d - Added and relocated files (52 minutes ago) <Ace>
+* 3710bfc - Added file3 (63 minutes ago) <Ace>
+* 3da5786 - Update 3 files. file3.txt is omitted (5 hours ago) <ace>
+* 4176516 - Added file0 (5 hours ago) <ace>
+* 8e31a92 - Added file1 (5 hours ago) <ace>
+```
 
