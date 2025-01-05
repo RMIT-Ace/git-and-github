@@ -48,7 +48,7 @@ Checking directory structure.
         └── xcode-git-demo2.xcodeproj
 ```
 
-![Xcode Init Git](images/xcode-init-git.jpg)
+![Xcode Init Git](images/xcode-file-explorer.jpg)
 
 ![Xcode Source Navigator & Git](images/xcode-src-nav.jpg)
 
