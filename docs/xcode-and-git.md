@@ -68,9 +68,13 @@ Let checks Xcode's features that support git operations.
 
 ![Xcode Uncommitted Changes](images/xcode-uncommitted-changes.jpg)
 
+Committing changes requires brief description.
+
 ![Xcode Commit Changes](images/xcode-git-commit.jpg)
 
 ![Xcode Git Branches Browser](images/xcode-git-branches.jpg)
+
+See who made what changes and when, etc.
 
 ![Xcode Changes & Authors](images/xcode-git-authors.jpg)
 
@@ -90,6 +94,7 @@ Some files should not be included into git repository. For example:
 ![Xcode Git Ignore](images/xcode-git-ignore.jpg)
 
 Solution: Add `.gitignore` file to project top-level directory.
+This file contains 2 lines as shown below.
 
 ```
 .DS_Store
@@ -109,3 +114,5 @@ Now add this new `.gitignore` file to your git repository.
 $ git add .gitignore
 $ git commit -m "Added git ignore file"
 ```
+
+Now, notice when changing Xcode editor's configuration, Xcode stops reporting these changes as git changes.
