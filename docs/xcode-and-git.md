@@ -59,3 +59,13 @@ Checking directory structure.
 ![Xcode Uncommitted Changes](images/xcode-uncommitted-changes.jpg)
 
 ![Xcode Commit Changes](images/xcode-git-commit.jpg)
+
+![Xcode Git Branches Browser](images/xcode-git-branches.jpg)
+
+![Xcode Changes & Authors](images/xcode-git-authors.jpg)
+
+![Xcode Stage Change](images/xcode-stage-single-change.jpg)
+
+![Xcode Staged vs. Unstagged](images/xcode-stage-unstagged.jpg)
+
+![Xcode Changes & Authors (2)](images/xcode-git-authors2.jpg)
