@@ -69,3 +69,33 @@ Checking directory structure.
 ![Xcode Staged vs. Unstagged](images/xcode-stage-unstagged.jpg)
 
 ![Xcode Changes & Authors (2)](images/xcode-git-authors2.jpg)
+
+# Git Ignore File (.gitignore)
+
+Some files should not be included into git repository. For example:
+
+- `.DS_Store`
+- `*.xcuserstate`
+
+![Xcode Git Ignore](images/xcode-git-ignore.jpg)
+
+Solution: Add `.gitignore` file to project top-level directory.
+
+```
+.DS_Store
+*.xcuserstate
+```
+
+Optional - remove ignore files which have already been added to git.
+
+```
+$ git rm --cached path/to/.DS_Store
+$ git rm --cached *.xcuserstate
+```
+
+Now add this new `.gitignore` file to your git repository.
+
+```
+$ git add .gitignore
+$ git commit -m "Added git ignore file"
+```
