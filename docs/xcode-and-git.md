@@ -72,6 +72,8 @@ Committing changes requires brief description.
 
 ![Xcode Commit Changes](images/xcode-git-commit.jpg)
 
+Browsing branches in your repository.
+
 ![Xcode Git Branches Browser](images/xcode-git-branches.jpg)
 
 See who made what changes and when, etc.
