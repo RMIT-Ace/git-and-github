@@ -1,8 +1,11 @@
 # XCode and git
 
+Let's start with a project with this directory structure below.
+The present of `.git` (hidden) folder implies that this directory and all its sub directories are under a git repository.
+
 ```
 .
-├── .git
+├── .git            <- This is a git repo.
 ├── docs
 └── src
     ├── file0.txt
@@ -26,10 +29,13 @@ Checking directory structure.
     ├── file1.txt
     ├── file2.txt
     ├── file3.txt
-    └── xcode-git-demo
-        ├── xcode-git-demo
-        └── xcode-git-demo.xcodeproj
+    └── xcode-git-demo                \
+        ├── xcode-git-demo            | Xcode's project folder
+        └── xcode-git-demo.xcodeproj  /
 ```
+
+Xcode allows a NEW git repository to be created upon creating a new project.
+However, if this new Xcode project is to be a part of an existing git repository, this step should be skipped - it is not recommended nesting .git repository.
 
 ![Xcode Init Git](images/xcode-init-git.jpg)
 
@@ -47,6 +53,10 @@ Checking directory structure.
         ├── xcode-git-demo2
         └── xcode-git-demo2.xcodeproj
 ```
+
+To keep our tutorial tidy, we will remove this Xcode project `xode-git-demo2`.
+
+Let checks Xcode's features that support git operations.
 
 ![Xcode Init Git](images/xcode-file-explorer.jpg)
 
