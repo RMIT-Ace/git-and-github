@@ -17,6 +17,8 @@
 
 # Creating a git project
 
+Let's create a brand new empty directory for our tutorial.
+
 ```bash
 $ cd SOME_DIR
 $ mkdir my-project
