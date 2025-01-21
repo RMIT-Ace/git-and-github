@@ -27,6 +27,15 @@
 
 ![Git Push](images/git-push.png)
 
-## Git Fork (Github?)
+# Git Fork (Github?)
 
 ![Git Fork](images/git-fork.png)
+
+## Git Fork - Source
+
+![Git Fork](images/github-fork-src.jpg)
+
+## Git Fork - Destination (copied)
+
+![Git Fork](images/github-fork-copied.jpg)
+
