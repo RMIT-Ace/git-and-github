@@ -13,4 +13,4 @@ Introduction to git and Github.
 2. [W3 Schools - Git Tutorial](https://www.w3schools.com/git/default.asp?remote=github)
 3. [Atlassian - What is Git?](https://www.atlassian.com/git/tutorials/what-is-git)
 
-.
+2025.01.24 Changes 1
