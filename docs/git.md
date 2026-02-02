@@ -1,5 +1,7 @@
 # Introduction to `git`
 
+https://youtu.be/3Chc1U04bRM?si=n7uyuPVCnbUkaJjY
+
 - Created by Linus Torvalds in 2005
 - Tracking changes to source files
 - Tracking who made changes
