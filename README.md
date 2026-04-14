@@ -13,8 +13,5 @@ Introduction to git and Github.
 2. [W3 Schools - Git Tutorial](https://www.w3schools.com/git/default.asp?remote=github)
 3. [Atlassian - What is Git?](https://www.atlassian.com/git/tutorials/what-is-git)
 
-.
-Udpate 2025.01.25 Change 1
-Update chage 2
-Update chage 3 (from RMIT macbook)
-Update chang 4
+>[!NOTE]
+> This is a note
