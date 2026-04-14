@@ -1,9 +1,12 @@
 # XCode and git
 
+This post continues our discussion from the previous one, For those unfamiliar with this tutorial, please refer to: [Introduction to Git](git.md).
+
 Let's start with a project with this directory structure below.
 The present of `.git` (hidden) folder implies that this directory and all its sub directories are under a git repository.
 
 ```
+$ tree -a -L2
 .
 ├── .git            <- This is a git repo.
 ├── docs
