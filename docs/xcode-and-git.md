@@ -2,8 +2,7 @@
 
 This post continues our discussion from the previous one, For those unfamiliar with this tutorial, please refer to: [Introduction to Git](git.md).
 
-Let's start with a project with this directory structure below.
-The present of `.git` (hidden) folder implies that this directory and all its sub directories are under a git repository.
+Let's continue with a project with this directory structure that we created from our previous exercises.
 
 ```
 $ tree -a -L2
@@ -16,6 +15,9 @@ $ tree -a -L2
     ├── file2.txt
     └── file3.txt
 ```
+
+The `tree` command with `-a` options lists all folders include hidden ones.
+The present of a hidden folder `.git` indicates that this directory and all its sub directories are under a git repository.
 
 Create new Xcode project.
 
@@ -38,7 +40,11 @@ Checking directory structure.
 ```
 
 Xcode allows a NEW git repository to be created upon creating a new project.
-However, if this new Xcode project is to be a part of an existing git repository, this step should be skipped - it is not recommended nesting .git repository.
+However, if this new Xcode project is to be a part of an existing git repository, 
+this step should be skipped - it is not recommended nesting .git repository.
+
+To compare the effect of selecting this option, let's create a second project called "xcode-git-demo2". 
+With this project, we will select "Create Git repository on my Mac" option.
 
 ![Xcode Init Git](images/xcode-init-git.jpg)
 
