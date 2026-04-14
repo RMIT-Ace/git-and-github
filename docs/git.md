@@ -42,12 +42,12 @@ Output
 └── src
 ```
 
-{: .note}
-If you don't have the `tree` command, you can install on macOS as follow:
-
-```bash
-$ brew install tree
-```
+> **ℹ️ NOTE**
+> If you don't have the `tree` command, you can install on macOS as follow:
+>
+> ```bash
+> $ brew install tree
+> ```
 
 Turn a directory into a git repository.
 
