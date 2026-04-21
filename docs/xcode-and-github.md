@@ -1,7 +1,8 @@
 # Xcode and Github
 
-Xcode with GitHub integration is a powerful combination for developers. It allows seamless collaboration, version control, and code sharing. With GitHub, you can easily manage your projects, collaborate with team members, and track changes in real-time. This integration enhances productivity, ensures code quality, and facilitates efficient project management. It's a must-have for modern software development.
+In earlier parts of this series, we covered how to use git on the command line and how to work with branches. We also looked at how Xcode has git built in, allowing you to commit and manage your project history without leaving the editor. In this guide, we take things a step further by connecting Xcode directly to GitHub — so you can push your code to a remote repository, back it up in the cloud, and start collaborating with others, all from within Xcode. See more on [Git & Github series](https://rmit-ace.github.io/git-and-github/)
 
+Xcode with GitHub integration is a powerful combination for developers. It allows seamless collaboration, version control, and code sharing. With GitHub, you can easily manage your projects, collaborate with team members, and track changes in real-time. This integration enhances productivity, ensures code quality, and facilitates efficient project management. It's a must-have for modern software development.
 
 ![](images/xcode-github-settings.png)
 
