@@ -4,8 +4,9 @@ Introduction to git and Github.
 1. [Introduction to git](docs/git.md)
 2. [Working with git branches](docs/branches.md)
 3. [Xcode and git](docs/xcode-and-git.md)
-4. [Remote Repository](docs/remote-repo.md)
-5. Introduction to Github
+4. [Xcode and Github](docs/xcode-and-github.md)
+5. [Remote Repository](docs/remote-repo.md)
+6. Introduction to Github
 
 # References
 
