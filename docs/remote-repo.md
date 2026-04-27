@@ -53,3 +53,4 @@ This shows a public GitHub repository that is available to fork. Navigate to the
 
 ![Git Fork](images/github-fork-copied.jpg)
 
+After forking, you are taken to your own copy of the repository under your GitHub account. Notice the header now shows your username as the owner, with a "forked from" link back to the original repository beneath it. GitHub also indicates if your fork is behind the original — use the Sync fork button to pull in any new changes from the original, or the Contribute button to send your changes back to the original via a pull request.
