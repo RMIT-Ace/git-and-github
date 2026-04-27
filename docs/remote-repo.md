@@ -2,6 +2,8 @@
 
 [This page is published here](https://rmit-ace.github.io/git-and-github/docs/remote-repo.html)
 
+So far you've been working with Git on your local machine - but the real power of Git comes when you connect to a remote repository. A remote repository is a copy of your project hosted on a server (like GitHub), which acts as a central hub where you and your teammates can share and sync your work. In this section, we'll look at the key commands that let you interact with a remote repository: cloning it for the first time, fetching and merging updates, pushing your own changes, and forking a project to make it your own.
+
 - git clone
 - git fetch
 - git merge
