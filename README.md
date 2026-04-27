@@ -8,7 +8,6 @@ This git series is published [here: https://rmit-ace.github.io/git-and-github/](
 3. [Xcode and git](docs/xcode-and-git.md)
 4. [Xcode and Github](docs/xcode-and-github.md)
 5. [Remote Repository](docs/remote-repo.md)
-6. Introduction to Github
 
 # References
 
