@@ -1,5 +1,7 @@
 # Remote Repository
 
+[This page is published here](https://rmit-ace.github.io/git-and-github/docs/remote-repo.html)
+
 - git clone
 - git fetch
 - git merge
